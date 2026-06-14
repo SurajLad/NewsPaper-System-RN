@@ -15,9 +15,9 @@ interface MNPCardProps {
 const MNPCard : React.FC<MNPCardProps> = ({value, backgroundColor , icon, iconColor, title}) => {
   return (
     <View style={{alignContent :'flex-start' , alignItems : 'flex-start' , width : 100  }}>
-      <Circle size={42}
+      <Circle size={52}
           backgroundColor={backgroundColor}
-          children =  <Icon name= {(icon!=null) ? icon : 'groups'} size={20} />
+          children =  <Icon name= {(icon!=null) ? icon : 'groups'} size={24} />
         /> 
       
       <Text style={[HomeStyles.titleTextStyle, {marginTop:16,marginBottom:8}]}>{value}</Text>

@@ -4,6 +4,7 @@ import { HomeStyles } from './styles/home_styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import HomeTopSection from './sections/top_section';
 import HomeMiddleSection from './sections/middle_section';
+import { useTheme } from '@react-navigation/native';
 
 interface HomeScreenProps {
   props : any,
@@ -12,8 +13,10 @@ interface HomeScreenProps {
 const HomePage : React.FC = ( {  } ) => {
   // const {numberCount, setCount} = useState(0);
 
+  const {colors} = useTheme();
+
   return (
-    <ScrollView style= {{backgroundColor :'#FFFFFF'}}>
+    <ScrollView style= {{backgroundColor : colors.background}}>
       <SafeAreaView 
           style = {{flex :1}} 
           edges={['top']} >

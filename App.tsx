@@ -12,14 +12,19 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 import HomePage from './src/features/home/home';
+import {  NavigationContainer } from '@react-navigation/native';
+import { CustomDarkTheme, CustomLightTheme } from './src/ui/components/theme/app_theme';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <SafeAreaProvider>
-     <HomePage/>
-    </SafeAreaProvider>
+    <NavigationContainer theme={ isDarkMode ? CustomDarkTheme : CustomLightTheme} >
+      <SafeAreaProvider>
+        <HomePage/>
+      </SafeAreaProvider>
+    </NavigationContainer >
+    
   );
 }
 
